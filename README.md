@@ -43,38 +43,26 @@ Implement monitoring tool like cloudwatch for monitoring
 
 ![image](https://github.com/lucm9/3-Tier-Architecture/assets/96879757/183b91d3-80ec-4f6b-8524-ad142e5dd597)
 
-Set up a VPC 
+## Set up a VPC 
 
-Create a VPC
-Create subnets as show in the architecture 
-Create a route table and associate it with public subnet
-Create route table and associate with private subnet 
-Create internet gateway and NAT gateway 
+- Create a VPC
+- Create subnets as show in the architecture 
+- Create a route table and associate it with public subnet
+- Create route table and associate with private subnet 
+- Create internet gateway and NAT gateway 
 
-SG (Security Group) 
-Create security group for ALB 
-Create security group for bastion server 
-Create security group for Web Servers
-Create security group for Rds database (mysql) - Rules should allow web server connection to the database 
+## SG (Security Group) 
+- Create security group for ALB 
+- Create security group for bastion server 
+- Create security group for Web Servers
+- Create security group for Rds database (mysql) - Rules should allow web server connection to the database 
 
-Provision Ec2 instance
-For bastion ensure to do installation as needed - mysql-client “sudo yum install mysql -y”
-Web App - Project 1 ( Application deployment) -made og
+## Provision Ec2 instance
+- For bastion ensure to do installation as needed - mysql-client “sudo yum install mysql -y”
+- Web App - Project 1 ( Application deployment) -made og
 
-Provision RDS database 
-Make use of free tier 
-
-Next step is to create an image of the AMI 
-Launch template 
-Create auto scaling group 
-
-
-
-Target Group 
-Create target group for web app
-Bastion does not need a target group as we don’t need to attach it to a load balancer 
-
-Create ALB (internet facing) 
+## Provision RDS database 
+- Make use of free tier
 
 ```
 CREATE TABLE users (
@@ -85,3 +73,23 @@ CREATE TABLE users (
     voted BOOLEAN DEFAULT FALSE
 );
 ```
+
+## Target Group 
+- Create target group for web app
+- Bastion does not need a target group as we don’t need to attach it to a load balancer
+
+
+## Create ALB (internet facing) 
+
+![image](https://github.com/lucm9/3-Tier-Architecture/assets/96879757/89b96c67-61ec-4621-b415-6d3f95f65759)
+
+
+## Auto Scalling Group 
+
+![image](https://github.com/lucm9/3-Tier-Architecture/assets/96879757/16aa5c9e-7993-47a3-8880-fda3609f8d1a)
+
+
+## Route 53 
+
+![image](https://github.com/lucm9/3-Tier-Architecture/assets/96879757/8c079f52-67c7-494e-a257-c902e390ae8c)
+
