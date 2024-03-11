@@ -20,6 +20,7 @@ Multi-AZ feature for our RDS database
 
 ## Security: 
 The webapp and the database are provisioned in the public subnet
+
 The client is using a default VPC which comes by default with public subnets placing resources in the public subnet expose them to the internet which expose the resources to major threats
 NAT Gateway should be provisioned
 HTTPS to secure our connection to the web server using nginx and apache 
