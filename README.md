@@ -14,33 +14,30 @@ To adhere to the 5 pillar of AWS architectural best practices
 
 
 ## Operational Excellence:
-We are not following aws best practices
-
-Automate tasks for reliability - auto scaling group for our EC2 instances 
-
-Multi-AZ feature for our RDS database 
+- We are not following aws best practices
+- Automate tasks for reliability - auto scaling group for our EC2 instances
+- Multi-AZ feature for our RDS database 
 
 ## Security: 
-The webapp and the database are provisioned in the public subnet
-
-The client is using a default VPC which comes by default with public subnets placing resources in the public subnet expose them to the internet which expose the resources to major threats
-NAT Gateway should be provisioned
-HTTPS to secure our connection to the web server using nginx and apache 
+- The webapp and the database are provisioned in the public subnet
+- The client is using a default VPC which comes by default with public subnets placing resources in the public subnet expose them to the internet which expose the resources to major threats
+- NAT Gateway should be provisioned
+- HTTPS to secure our connection to the web server using nginx and apache 
 
 ## Reliability:
-This architecture is lacking proper reliability should the web app or the database fail we don't have any DR in place
-I will recommend to configure auto scaling group in multiple AZ should one AZ fail the webapp will still be available in the other region
-Stand alone database - in case we have a failure we can't fail over
+- This architecture is lacking proper reliability should the web app or the database fail we don't have any DR in place
+- I will recommend to configure auto scaling group in multiple AZ should one AZ fail the webapp will still be available in the other region
+- Stand alone database - in case we have a failure we can't fail over
 
 ## Performance Efficiency: 
-Should traffic increase the web app will not be able to handle the mass traffic from users as there's only 1 web app
-I will configure auto scaling group
-There's no way to distribute traffic
-Recommend 2 load balancers 1 external and 1 internal to distribute traffic and secure the environment 
+- Should traffic increase the web app will not be able to handle the mass traffic from users as there's only 1 web app
+- I will configure auto scaling group
+- There's no way to distribute traffic
+- Recommend 2 load balancers 1 external and 1 internal to distribute traffic and secure the environment 
 
 ## Cost Optimization: 
-Although current architecture might be cheaper we can be exposed to spending more on fixes
-Implement monitoring tool like cloudwatch for monitoring 
+- Although current architecture might be cheaper we can be exposed to spending more on fixes
+- Implement monitoring tool like cloudwatch for monitoring 
 
 ## New Proposed Architecture
 
