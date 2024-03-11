@@ -59,7 +59,7 @@ Implement monitoring tool like cloudwatch for monitoring
 
 ## Provision Ec2 instance
 - For bastion ensure to do installation as needed - mysql-client “sudo yum install mysql -y”
-- Web App - Project 1 ( Application deployment) -made og
+- Web App - signin.php and signup.php
 
 ## Provision RDS database 
 - Make use of free tier
