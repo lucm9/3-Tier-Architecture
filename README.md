@@ -15,7 +15,9 @@ To adhere to the 5 pillar of AWS architectural best practices
 
 ## Operational Excellence:
 We are not following aws best practices
+
 Automate tasks for reliability - auto scaling group for our EC2 instances 
+
 Multi-AZ feature for our RDS database 
 
 ## Security: 
