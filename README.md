@@ -52,9 +52,9 @@ Implement monitoring tool like cloudwatch for monitoring
 - Create internet gateway and NAT gateway 
 
 ## SG (Security Group) 
-- Create security group for ALB 
-- Create security group for bastion server 
-- Create security group for Web Servers
+- Create security group for ALB - allow http from www 
+- Create security group for bastion server - all ssh from your ip only your network should be able to ssh into bastion host
+- Create security group for Web Servers - Allow ssh from bastion and http from alb
 - Create security group for Rds database (mysql) - Rules should allow web server connection to the database 
 
 ## Provision Ec2 instance
