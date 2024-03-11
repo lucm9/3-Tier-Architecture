@@ -24,12 +24,12 @@ Client is using a default VPC which comes by default with public subnets placing
 NAT Gateway
 HTTPS to secure our connection to the web server using nginx and apache 
 
-##Reliability:
+## Reliability:
 This architecture is lacking proper reliability should the web app or the database fail we don't have any DR in place
 I will recommend to configure auto scaling group in multiple AZ should one AZ fail the webapp will still be available in the other region
 Stand alone database - in case we have a failure we can't fail over
 
-##Performance Efficiency: 
+## Performance Efficiency: 
 Should traffic increase the web app will not be able to handle the mass traffic from users as there's only 1 web app
 I will configure auto scaling group
 There's no way to distribute traffic
